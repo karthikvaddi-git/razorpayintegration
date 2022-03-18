@@ -13,6 +13,7 @@ def index(request):
 
 def pay(request):
     if request.method=="POST":
+        phone=request.POST.get('phonenumber')
 
         name=request.POST.get('nameid')
         email=request.POST.get('emailid')
@@ -27,7 +28,7 @@ def pay(request):
 
 
 
-        saveobj = savenature(name=name, email=email, paymentid=payment['id'],amount=amount)
+        saveobj = savenature(name=name, email=email, paymentid=payment['id'],amount=amount,phonenumber=phone)
         saveobj.save()
         context={'payment':payment}
 
@@ -61,6 +62,9 @@ def success(request):
         try:
 
                 status = client.utility.verify_payment_signature(params_dict)
+                user = savenature.objects.filter(paymentid=orderid).first()
+                user.paid = True
+                user.save()
                 return HttpResponse("payemnet succesful")
 
 
