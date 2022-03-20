@@ -43,3 +43,13 @@ The project is deployed on pythonfromanywhere.com
 - Simple to donate money
 
 
+## Technology 
+
+Frontend:
+ HTML 
+ CSS 
+ (template downloaded from smarteyelabs)
+
+Backend:
+ DJANGO
+ SQLITE 
