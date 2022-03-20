@@ -31,7 +31,7 @@ Install my-project with pip install
 The project is deployed on pythonfromanywhere.com
 
 ```bash
-  
+      http://karthikvaddi.pythonanywhere.com/
 ```
 
 
@@ -43,4 +43,3 @@ The project is deployed on pythonfromanywhere.com
 - Simple to donate money
 
 
-## Project images
